@@ -111,3 +111,34 @@ print(moj_statek2_1.pola_masztow)
 
 ##### pokazuje pozcje pól nieaktywnych #####
 print(kukuryku)
+
+### zdobywanie punktow 
+moje_zycia==19
+zycia_komputera==19
+while True:
+    if strzal_komputera==moj_statek2[0] or strzal_komputera==moj_statek2[1]:
+        moje_zycia-=1
+        print("przeciwnik trafił w twój statek, punkt dla niego")
+        moj_statek2.remove(strzal_komputera)
+    if strzal_komputera==moj_statek2_1[0] or strzal_komputera==moj_statek2_1[1]:
+        moje_zycia-=1
+        print("przeciwnik trafił w twój statek, punkt dla niego")
+        moj_statek2_1.remove(strzal_komputera)
+    if strzal_komputera==moj_statek3[0] or strzal_komputera==moj_statek3[1] or strzal_komputera==moj_statek3[2]:
+        moje_zycia-=1
+        print("przeciwnik trafił w twój statek, punkt dla niego")
+        moj_statek3.remove(strzal_komputera)
+    if strzal_komputera==moj_statek3_1[0] or strzal_komputera==moj_statek3_1[1] or strzal_komputera==moj_statek3_1[2]:
+        moje_zycia-=1
+        print("przeciwnik trafił w twój statek, punkt dla niego")
+        moj_statek3_1.remove(strzal_komputera)
+    if strzal_komputera==moj_statek4[0] or strzal_komputera==moj_statek4[1] or strzal_komputera==moj_statek4[1] or strzal_komputera==moj_statek4[2] or strzal_komputera==moj_statek4[3]:
+        moje_zycia-=1
+        print("przeciwnik trafił w twój statek, punkt dla niego")
+        moj_statek4.remove(strzal_komputera)
+    if strzal_komputera==moj_statek5[0] or strzal_komputera==moj_statek5[1] or strzal_komputera==moj_statek5[2] or strzal_komputera==moj_statek5[3] or strzal_komputera==moj_statek5[4]:
+        moje_zycia-=1
+        print("przeciwnik trafił w twój statek, punkt dla niego")
+        moj_statek5.remove(strzal_komputera)
+    break
+
