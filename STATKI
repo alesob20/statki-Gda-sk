@@ -109,6 +109,15 @@ print(moj_statek3_1.pola_masztow)
 print(moj_statek2.pola_masztow)
 print(moj_statek2_1.pola_masztow)
 
+twoje_pola_statkow=[]
+twoje_pola_statkow.append(moj_statek2.pola_masztow)
+twoje_pola_statkow.append(moj_statek2_1.pola_masztow)
+twoje_pola_statkow.append(moj_statek3.pola_masztow)
+twoje_pola_statkow.append(moj_statek3_1.pola_masztow)
+twoje_pola_statkow.append(moj_statek4.pola_masztow)
+twoje_pola_statkow.append(moj_statek5.pola_masztow)
+print("twoje statki: ",twoje_pola_statkow)
+
 ##### pokazuje pozcje pól nieaktywnych #####
 print(kukuryku)
 
@@ -199,3 +208,98 @@ print("pola już nieaktywne: ",pola_nieaktywne)
 print("pola statku: ", p_statki)
 
 print(len(p_statki[0]))
+
+###gracze na zmianę oddają strzały i zatapiają statki przeciwników###
+while len(p_statki)>0 and len(twoje_pola_statkow)>0:
+
+
+    x_s=int(input("podaj współrzędna do strzału: "))
+    x_y=int(input("podaj współrzędną do strzału: "))
+    strzal=[x_s,x_y]
+    if strzal in p_statki[0]:
+        print("trafiłeś w statek przeciwnika!")
+        p_statki[0].remove(strzal)
+        if len(p_statki[0])==0:
+            print("statek przeciwnika poszedł na dno!")
+            p_statki.remove(p_statki[0])
+    elif strzal in p_statki[1]:
+        print("trafiłeś w statek przeciwnika!")
+        p_statki[1].remove(strzal)
+        if len(p_statki[1])==0:
+            print("statek przeciwnika poszedł na dno!")
+            p_statki.remove(p_statki[1])
+    elif strzal in p_statki[2]:
+        print("trafiłeś w statek przeciwnika!")
+        p_statki[2].remove(strzal)
+        if len(p_statki[2])==0:
+            print("statek przeciwnika poszedł na dno!")
+            p_statki.remove(p_statki[2])
+    elif strzal in p_statki[3]:
+        print("trafiłeś w statek przeciwnika!")
+        p_statki[3].remove(strzal)
+        if len(p_statki[3])==0:
+            print("statek przeciwnika poszedł na dno!")
+            p_statki.remove(p_statki[3])
+    elif strzal in p_statki[4]:
+        print("trafiłeś w statek przeciwnika!")
+        p_statki[4].remove(strzal)
+        if len(p_statki[4])==0:
+            print("statek przeciwnika poszedł na dno!")
+            p_statki.remove(p_statki[4])
+    elif strzal in p_statki[5]:
+        print("trafiłeś w statek przeciwnika!")
+        p_statki[5].remove(strzal)
+        if len(p_statki[5])==0:
+            print("statek przeciwnika poszedł na dno!")
+            p_statki.remove(p_statki[5])
+    else:
+        print("pudło!!!")
+
+    strzal_x=random.randint(1,10)
+    strzal_y=random.randint(1,10)
+    strzaly=[strzal_x,strzal_y]
+    print("strzały przeciwnika: ",strzaly)
+    if strzaly in twoje_pola_statkow[0]:
+        print("przeciwnik trafił w twój statek!")
+        twoje_pola_statkow[0].remove(strzaly)
+        if len(twoje_pola_statkow[0])==0:
+            print("twój statek poszedł na dno!")
+            twoje_pola_statkow.remove(twoje_pola_statkow[0])
+    elif strzaly in twoje_pola_statkow[1]:
+        print("przeciwnik trafił w twój statek! ")
+        twoje_pola_statkow[1].remove(strzaly)
+        if len(twoje_pola_statkow[1])==0:
+            print("twój statek poszedł na dno!")
+            twoje_pola_statkow.remove(twoje_pola_statkow[1])
+    elif strzaly in twoje_pola_statkow[2]:
+        print("przeciwnik trafił w twój statek!")
+        twoje_pola_statkow[2].remove(strzaly)
+        if len(twoje_pola_statkow[2])==0:
+            print("twój statek poszedł na dno!")
+            twoje_pola_statkow.remove(twoje_pola_statkow[2])
+    elif strzaly in twoje_pola_statkow[3]:
+        print("przeciwnik trafił w twój statek!")
+        twoje_pola_statkow[3].remove(strzaly)
+        if len(twoje_pola_statkow[3])==0:
+            print("twój statek poszedł na dno!")
+            twoje_pola_statkow.remove(twoje_pola_statkow[3])
+    elif strzaly in twoje_pola_statkow[4]:
+        print("przeciwnik trafił w twój statek!")
+        twoje_pola_statkow[4].remove(strzaly)
+        if len(twoje_pola_statkow[4])==0:
+            print("twój statek poszedł na dno!")
+            twoje_pola_statkow.remove(twoje_pola_statkow[4])
+    elif strzaly in twoje_pola_statkow[5]:
+        print("przeciwnik trafił w twój statek!")
+        twoje_pola_statkow[5].remove(strzaly)
+        if len(twoje_pola_statkow[5])==0:
+            print("twój statek poszedł na dno!")
+            twoje_pola_statkow.remove(twoje_pola_statkow[5])
+    else:
+        print("pudło!!!")
+        
+###rozstrzygnięcie wygranej###
+if len(twoje_pola_statkow)==0:
+    print("Wszystkie twoje statki zostały zatopione, przegrałeś grę :(")
+elif len(p_statki)==0:
+    print("Zatopiłeś wszystkie statki przeciwnika i wygrałeś grę :)")
