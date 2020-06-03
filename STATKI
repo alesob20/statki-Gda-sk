@@ -111,3 +111,47 @@ print(moj_statek2_1.pola_masztow)
 
 ##### pokazuje pozcje pól nieaktywnych #####
 print(kukuryku)
+
+
+###proba rozstrzygniecia wygranej###
+strzal_komputera=[]
+moje_strzaly=[]
+while True:
+    ###każdy z graczy oddaje swój strzał###
+    for i in range(2):
+        strzal=int(input("komputer podaje swoj strzał: "))
+        strzal_komputera.append(strzal)
+    for i in range(2):
+        moj_strzal=int(input("podaj swoj strzał: "))
+        moje_strzaly.append(moj_strzal)
+
+    ###jeśli komputer trafi we wpółrzędne któregoś z naszych statków, są one usuwane z listy tego statku###
+    if strzal_komputera in moj_statek2.pola_masztow:
+        print("przeciwnik trafił w twój statek!")
+        moj_statek2.pola_masztow.remove(strzal_komputera)
+
+
+    elif strzal_komputera in moj_statek2_1.pola_masztow:
+        print("przeciwnik trafił w twój statek!")
+        moj_statek2_1.pola_masztow.remove(strzal_komputera)
+
+    elif strzal_komputera in moj_statek3.pola_masztow:
+        print("przeciwnik trafił w twój statek!")
+        moj_statek3.pola_masztow.remove(strzal_komputera)
+
+    elif strzal_komputera in moj_statek3_1.pola_masztow:
+        print("przeciwnik trafił w twój statek!")
+        moj_statek3_1.pola_masztow.remove(strzal_komputera)
+
+
+    elif strzal_komputera in moj_statek4.pola_masztow:
+        print("przeciwnik trafił w twój statek!")
+        moj_statek4.pola_masztow.remove(strzal_komputera)
+
+
+    elif strzal_komputera in moj_statek5.pola_masztow:
+        print("przeciwnik trafił w twój statek!")
+        moj_statek5.pola_masztow.remove(strzal_komputera)
+
+    else:
+        print("Nietrafiony strzał!")
